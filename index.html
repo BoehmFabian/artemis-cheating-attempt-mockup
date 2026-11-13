@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB" data-theme="light">
+<html lang="en-GB" data-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,16 +11,45 @@
 </head>
 <body>
 <div class="app-shell">
+    <header class="global-topbar">
+        <a class="global-brand" href="index.html" aria-label="Artemis home">
+            <span class="global-brand-mark" aria-hidden="true">A</span>
+            <span class="global-brand-name">Artemis</span>
+            <span class="global-version">10.7</span>
+        </a>
+        <span class="global-header-divider" aria-hidden="true"></span>
+        <a class="global-course-link" href="#"><span class="global-course-mark">e</span> e-Prüfungs-Symposium 2024</a>
+        <div class="global-header-spacer"></div>
+        <nav class="global-utilities" aria-label="Global navigation">
+            <a href="#">Student</a><span aria-hidden="true">|</span><a href="#">Management</a>
+            <button type="button" class="global-utility-button" aria-label="Search"><span data-icon="search"></span><span>Search</span><kbd>Ctrl+K</kbd></button>
+            <button type="button" class="global-utility-button" aria-label="Notifications"><span data-icon="bell"></span></button>
+        </nav>
+    </header>
+    <nav class="global-sidebar" aria-label="Artemis navigation">
+        <a class="global-nav-item" href="#"><span data-icon="grid"></span><span>Overview</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="code"></span><span>Exercises</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="book-open"></span><span>Lectures</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="users"></span><span>Tutorials</span></a>
+        <a class="global-nav-item active" href="index.html" aria-current="page"><span data-icon="graduation-cap"></span><span>Exams</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="target"></span><span>Competencies</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="help-circle"></span><span>FAQ</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="message"></span><span>Communication</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="sparkles"></span><span>Iris</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="sparkles"></span><span>Athena</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="clipboard"></span><span>Assessment</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="book-open"></span><span>Learning Path</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="chart"></span><span>Scores</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="chart"></span><span>Statistics</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="server"></span><span>Build Overview</span></a>
+        <a class="global-nav-item" href="#"><span data-icon="video"></span><span>TUM Live</span></a>
+        <div class="global-sidebar-spacer"></div>
+        <a class="global-nav-item global-settings" href="#"><span data-icon="settings"></span><span>Settings</span></a>
+    </nav>
     <aside class="sidebar" id="sidebar" aria-label="Exam management navigation">
-        <div class="sidebar-brand">
-            <a class="brand-link" href="index.html">
-                <span class="brand-mark"><span data-icon="graduation-cap"></span></span>
-                <span class="brand-text">
-                    <strong>Artemis</strong>
-                    <small>Exam management</small>
-                </span>
-            </a>
-            <button class="icon-btn sidebar-close" type="button" data-sidebar-toggle aria-label="Close navigation" aria-expanded="false">
+        <div class="sidebar-brand contextual-sidebar-heading">
+            <span class="contextual-sidebar-title">Exams <span class="info-mark" aria-label="Exam management">i</span></span>
+            <button class="icon-btn sidebar-close" type="button" data-sidebar-toggle aria-label="Close exam navigation" aria-expanded="false">
                 <span data-icon="x"></span>
             </button>
         </div>
@@ -31,7 +60,7 @@
                 ITP – Introduction to Programming
                 <span data-icon="chevron-down"></span>
             </button>
-            <span class="context-exam"><span class="live-dot"></span> ITP SE1 · Supervised Exercise</span>
+            <span class="context-exam"><span data-icon="graduation-cap"></span> ITP SE1 · Supervised Exercise</span>
         </div>
 
         <nav class="sidebar-nav" aria-label="Exam sections">
@@ -75,8 +104,7 @@
                 </nav>
             </div>
             <div class="topbar-right">
-                <span class="exam-live"><span class="live-dot"></span> Exam in progress</span>
-                <button class="icon-btn" type="button" aria-label="Search"><span data-icon="search"></span></button>
+                
                 <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">
                     <span class="theme-icon-light" data-icon="moon"></span>
                     <span class="theme-icon-dark" data-icon="sun"></span>

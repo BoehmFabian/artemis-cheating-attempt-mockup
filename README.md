@@ -1,10 +1,10 @@
 # Cheating Attempt Database — Artemis Mockup
 
-A clickable, self-contained HTML/CSS/JS prototype of a cheating-attempt reporting and review workflow for Artemis. It demonstrates requirements developed for an academic seminar project; the requirements specification is maintained separately and is not included in this mockup repository.
+A clickable, self-contained HTML/CSS/JS prototype of an Artemis cheating-attempt reporting and review workflow. The full requirements specification is maintained separately and is not included in this mockup repository.
 
 Open [`index.html`](index.html) in a browser. No build step or web server is required.
 
-The mockup uses TUM AET UI design tokens mirrored from the [Artemis TUM AET UI package](https://github.com/ls1intum/Artemis/tree/develop/packages/tum-aet-ui) and follows the [AET UI/UX guidelines](https://ls1intum.github.io/ui-ux-guidelines/docs/intro).
+The mockup follows the Artemis visual language in the supplied reference: a compact global header, a two-level navigation shell, dense monospace typography, cool-slate dark surfaces, blue links/actions, and square-edged panels. Its reusable controls retain TUM AET UI token names while mapping them to Artemis theme values. See the [Artemis theme variables](https://github.com/ls1intum/Artemis/tree/develop/src/main/webapp/content/scss/themes) and the [AET UI/UX guidelines](https://ls1intum.github.io/ui-ux-guidelines/docs/intro).
 
 ## Screens
 
@@ -22,7 +22,8 @@ The mockup uses TUM AET UI design tokens mirrored from the [Artemis TUM AET UI p
 
 ### Theme and responsive variants
 
-- Light and dark theme toggle in the top bar.
+- Dark Artemis theme is the default; the top bar offers a light-theme toggle.
+- Artemis global navigation rail, course/exam context sidebar, and compact application header.
 - Desktop layout at 1440 px.
 - Tablet layout at 1024 px.
 - Mobile layout at 390 px with a collapsible sidebar and stacked case cards.
@@ -37,7 +38,7 @@ The mockup uses TUM AET UI design tokens mirrored from the [Artemis TUM AET UI p
 | FR-4.1–FR-4.9: decision and communication | Formal notification record, student statement, human decision, measure/referral, immutable decision warning |
 | FR-5.1–FR-5.8: evidence | SHA-256, integrity verification, access log, chain of custody, download |
 | FR-6.1–FR-6.10: views and reporting | Dashboard counts, search, status/category filters, case list, evidence view, prior confirmed cases |
-| FR-7.1–FR-7.7: access control | Tutor/primary/secondary/instructor/staff contexts, tutor view limited to own reports, no tutor decision or audit access |
+| FR-7.1–FR-7.7: access control | Tutor/primary/secondary/instructor/staff contexts, tutor view limited to own reports, no tutor decision/audit/export/download access |
 | FR-8.1–FR-8.5: audit | Audit tab with actor/time/action/detail/IP columns |
 | FR-9.1–FR-9.6: administration | Exam settings, feature context, retention/legal-hold messaging |
 | FR-10.1–FR-10.6: interfaces | Case links, stable references, notification-only case reference, external record links |
@@ -49,7 +50,7 @@ The mockup uses TUM AET UI design tokens mirrored from the [Artemis TUM AET UI p
 
 1. Toggle the theme with the moon/sun button.
 2. Click the profile icon and switch between **Staff view** and **Tutor view**.
-3. In tutor view, the dashboard shows only the tutor's own reports and hides staff-only actions.
+3. In tutor view, the dashboard shows only the tutor's own reports and hides decision, audit, export, and download actions.
 4. Search for `Jonas` or use the status/category filters on the dashboard.
 5. Open **Report cheating attempt**, switch between **Name or TUM ID** and **Room & seat**, and submit the prefilled form.
 6. Open **CA-2026-0042**, choose **Edit report**, change the category or description, add or remove evidence, and save.
@@ -60,13 +61,15 @@ The mockup uses TUM AET UI design tokens mirrored from the [Artemis TUM AET UI p
 
 ## Rendered previews
 
-The `screenshots/` folder contains rendered previews of the main screens and interactions:
+The `screenshots/` folder contains full-page renders of the main screens:
 
 - [`dashboard-desktop.png`](screenshots/dashboard-desktop.png)
 - [`dashboard-tutor.png`](screenshots/dashboard-tutor.png)
 - [`dashboard-mobile.png`](screenshots/dashboard-mobile.png)
 - [`dashboard-mobile-menu.png`](screenshots/dashboard-mobile-menu.png)
 - [`dashboard-dark.png`](screenshots/dashboard-dark.png)
+- [`dashboard-artemis-style.png`](screenshots/dashboard-artemis-style.png)
+- [`dashboard-artemis-style.png`](screenshots/dashboard-artemis-style.png)
 - [`profile-menu.png`](screenshots/profile-menu.png)
 - [`quick-capture-desktop.png`](screenshots/quick-capture-desktop.png)
 - [`quick-capture-seat-mode.png`](screenshots/quick-capture-seat-mode.png)
@@ -88,8 +91,9 @@ The `screenshots/` folder contains rendered previews of the main screens and int
 
 ## Design notes
 
-- **Tokens:** colours, spacing, radii, shadows, and typography use the `--tumaet-ui-*` tokens from
-  `tokens.css`. No external UI framework or icon font is required.
+- **Artemis styling:** the dark palette, compact double-sidebar shell, monospace typography, blue links,
+  and squared panels follow the supplied Artemis screenshot and the checked-in Artemis theme values.
+  Reusable controls use semantic `--tumaet-ui-*` variables in `tokens.css`; no external framework or icon font is required.
 - **Button hierarchy:** one primary action per screen or form (report, sign, record decision), secondary
   actions for adjacent steps, destructive actions are not used in the first-release flow.
 - **Status:** every status uses a text label and a dot or icon in addition to colour.
@@ -99,11 +103,11 @@ The `screenshots/` folder contains rendered previews of the main screens and int
   light and dark mode with no violations.
 - **Responsive:** the sidebar collapses below 1024 px, multi-column grids stack below 1180 px, and the
   case table becomes a labelled card list below 900 px.
-- **Privacy:** the workflow keeps evidence out of notifications, and role-based views enforce who can
-  access reports, decisions, room protocols, and audit records.
+- **Access control:** tutor view is limited to own reports. Decision, audit, room protocol, case export,
+  audit export, and file download controls are unavailable to tutors.
 - **Role switch:** the profile menu is a mockup control for demonstrating FR-7.3. In tutor view, the
-  dashboard is limited to the tutor's own reports; decision and audit tabs, room protocol, export, and
-  staff navigation are hidden.
+  dashboard is limited to the tutor's own reports; decision and audit tabs, room protocol, exports, and
+  download controls are hidden.
 - **Report editing:** the edit page mirrors quick capture while the room protocol is unsigned. Student
   selection and incident time are locked; category, description, immediate action, witness, and evidence
   can change. After signing, the case must be reopened with a reason.
@@ -112,7 +116,9 @@ The `screenshots/` folder contains rendered previews of the main screens and int
 
 - All names, case numbers, timestamps, hashes, and evidence are fictional.
 - There is no server, authentication, database, file upload, or persistence.
-- Upload, download, export, letter generation, and external links are simulated.
+- Upload, download, export, letter generation, and external links are simulated. Tutor view hides report,
+  room protocol, and evidence download controls. Tutor view hides report,
+  room protocol, and evidence download controls.
 - The case detail and decision pages show the same case at different moments in the process; the
   decision page assumes the room protocol has been signed.
 - Signatures are recorded once per room protocol summary, not per report.

@@ -1,6 +1,6 @@
 /* Artemis cheating-attempt mockup.
-   Layout and component styling follows the AET UI/UX guidelines and uses the
-   TUM AET UI design tokens mirrored in tokens.css. */
+   The shell and palette follow Artemis's checked-in dark theme. Reusable values
+   use semantic token names in tokens.css. */
 
 :root {
     --app-sidebar-width: 17rem;
@@ -422,20 +422,6 @@ svg {
     text-overflow: ellipsis;
 }
 
-.exam-live {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0.625rem;
-    color: var(--tumaet-ui-state-success-foreground);
-    font-size: 0.75rem;
-    font-weight: 600;
-    white-space: nowrap;
-    background: var(--app-success-soft);
-    border: 1px solid var(--app-success-border);
-    border-radius: 999px;
-}
-
 .profile-menu-root {
     position: relative;
     display: inline-flex;
@@ -583,26 +569,6 @@ svg {
 .profile-menu-item [data-icon] {
     width: 1rem;
     height: 1rem;
-}
-
-.live-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    flex: 0 0 auto;
-    background: var(--tumaet-ui-state-success);
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px color-mix(in oklab, var(--tumaet-ui-state-success) 18%, transparent);
-    animation: live-pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes live-pulse {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.55;
-    }
 }
 
 .topbar .menu-btn {
@@ -929,82 +895,6 @@ h3 {
     justify-content: flex-end;
     gap: 0.5rem;
     margin-top: 1.25rem;
-}
-
-.banner {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.875rem;
-    padding: 0.9375rem 1.125rem;
-    margin: 1rem 0;
-    background: var(--app-info-soft);
-    border: 1px solid var(--app-info-border);
-    border-radius: 0.75rem;
-}
-
-.banner-warning {
-    background: var(--app-warning-soft);
-    border-color: var(--app-warning-border);
-}
-
-.banner-danger {
-    background: var(--app-danger-soft);
-    border-color: var(--app-danger-border);
-}
-
-.banner-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    flex: 0 0 auto;
-    margin-top: 0.0625rem;
-    color: var(--tumaet-ui-state-info-foreground);
-}
-
-.banner-warning .banner-icon {
-    color: var(--tumaet-ui-state-warning-foreground);
-}
-
-.banner-danger .banner-icon {
-    color: var(--tumaet-ui-state-danger-foreground);
-}
-
-.banner-body {
-    flex: 1 1 auto;
-    min-width: 0;
-}
-
-.banner strong {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 650;
-}
-
-.banner p {
-    max-width: 90ch;
-    margin: 0.25rem 0 0;
-    font-size: 0.8125rem;
-    line-height: 1.5;
-}
-
-.banner-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin-left: auto;
-    color: var(--tumaet-ui-accent-color);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-.banner-link:hover {
-    text-decoration: underline;
-}
-
-.banner-link [data-icon] {
-    width: 0.875rem;
-    height: 0.875rem;
 }
 
 .tag {
@@ -1849,68 +1739,6 @@ input[disabled] {
     color: var(--app-muted-text);
 }
 
-.note {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.625rem;
-    padding: 0.875rem;
-    color: var(--app-muted-text);
-    font-size: 0.75rem;
-    line-height: 1.5;
-    background: var(--app-subtle-background);
-    border: 1px solid var(--tumaet-ui-border-color);
-    border-radius: 0.75rem;
-}
-
-.note [data-icon] {
-    width: 1.125rem;
-    height: 1.125rem;
-    flex: 0 0 auto;
-    margin-top: 0.0625rem;
-    color: var(--tumaet-ui-accent-color);
-}
-
-.note strong {
-    display: block;
-    color: var(--tumaet-ui-text-color);
-    font-size: 0.8125rem;
-    font-weight: 650;
-}
-
-.note p {
-    margin: 0.25rem 0 0;
-}
-
-.note-privacy {
-    background: var(--app-info-soft);
-    border-color: var(--app-info-border);
-}
-
-.checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.checklist li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.625rem;
-    font-size: 0.8125rem;
-    line-height: 1.45;
-}
-
-.checklist li > [data-icon] {
-    width: 1rem;
-    height: 1rem;
-    flex: 0 0 auto;
-    margin-top: 0.1rem;
-    color: var(--tumaet-ui-state-success);
-}
-
 /* --------------------------------------------------------------------------
    Tabs and detail views
    -------------------------------------------------------------------------- */
@@ -2468,13 +2296,6 @@ input[disabled] {
     border-top: 1px solid var(--tumaet-ui-border-color);
 }
 
-.capture-footer-note {
-    max-width: 42ch;
-    color: var(--app-muted-text);
-    font-size: 0.75rem;
-    line-height: 1.45;
-}
-
 .capture-footer-actions {
     display: flex;
     flex: 0 0 auto;
@@ -2604,30 +2425,6 @@ input[disabled] {
     line-height: 1.35;
 }
 
-.category-copy small {
-    display: block;
-    margin-top: 0.125rem;
-    color: var(--app-muted-text);
-    font-size: 0.6875rem;
-    line-height: 1.4;
-}
-
-.category-icon {
-    display: grid;
-    flex: 0 0 auto;
-    place-items: center;
-    width: 1.75rem;
-    height: 1.75rem;
-    color: var(--tumaet-ui-accent-color);
-    background: var(--app-subtle-background);
-    border-radius: 0.5rem;
-}
-
-.category-icon [data-icon] {
-    width: 1rem;
-    height: 1rem;
-}
-
 .upload-zone {
     display: flex;
     flex-wrap: wrap;
@@ -2664,13 +2461,6 @@ input[disabled] {
     display: block;
     font-size: 0.875rem;
     font-weight: 650;
-}
-
-.upload-copy p {
-    margin: 0.25rem 0 0;
-    color: var(--app-muted-text);
-    font-size: 0.75rem;
-    line-height: 1.45;
 }
 
 .upload-actions {
@@ -3513,10 +3303,6 @@ dialog::backdrop {
         display: none;
     }
 
-    .topbar-right .exam-live {
-        display: none;
-    }
-
     .page {
         padding: 1rem 1rem 1.5rem;
     }
@@ -3618,5 +3404,533 @@ dialog::backdrop {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Artemis application shell and theme alignment
+   -------------------------------------------------------------------------- */
+
+:root {
+    --app-sidebar-width: 15rem;
+    --app-page-background: var(--artemis-body-background);
+    --app-subtle-background: var(--artemis-panel-background);
+    --app-primary: var(--artemis-primary-color);
+    --app-primary-soft: color-mix(in oklab, var(--artemis-primary-color) 15%, var(--artemis-module-background));
+    --app-muted-text: var(--tumaet-ui-muted-color);
+}
+
+[data-theme='dark'] {
+    --app-page-background: var(--artemis-module-background);
+    --app-subtle-background: var(--artemis-body-background);
+    --app-muted-text: #adb5bd;
+}
+
+html,
+body {
+    background: var(--app-page-background);
+}
+
+body {
+    font-family: var(--artemis-font-family, var(--tumaet-ui-font-family));
+    font-size: 0.875rem;
+    line-height: 1.45;
+}
+
+.app-shell {
+    gap: 0;
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+.global-topbar {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 2rem;
+    padding: 0 0.75rem;
+    color: #ced4da;
+    background: var(--artemis-navbar-background);
+    border-bottom: 1px solid color-mix(in oklab, #fff 8%, transparent);
+    font-size: 0.6875rem;
+    line-height: 1;
+}
+
+.global-brand,
+.global-course-link {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.global-brand:hover,
+.global-course-link:hover,
+.global-utilities a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.global-brand-mark {
+    color: var(--artemis-link-color);
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.global-brand-name {
+    color: var(--artemis-link-color);
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+.global-version {
+    color: #adb5bd;
+    font-size: 0.625rem;
+}
+
+.global-header-divider {
+    width: 1px;
+    height: 1rem;
+    background: rgb(255 255 255 / 0.18);
+}
+
+.global-course-link {
+    color: #f8f9fa;
+}
+
+.global-course-mark {
+    display: grid;
+    place-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    color: #fff;
+    font-weight: 700;
+    background: #22272e;
+    border-radius: 0.1875rem;
+}
+
+.global-header-spacer {
+    flex: 1 1 auto;
+}
+
+.global-utilities {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    height: 100%;
+}
+
+.global-utilities a {
+    color: #ced4da;
+    text-decoration: none;
+}
+
+.global-utility-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-height: 1.65rem;
+    padding: 0 0.35rem;
+    color: #ced4da;
+    font: inherit;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.global-utility-button [data-icon] {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.global-utility-button kbd {
+    padding: 0.1rem 0.25rem;
+    color: #dee2e6;
+    font: inherit;
+    background: #22272e;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-radius: 0.1875rem;
+}
+
+.global-sidebar {
+    position: sticky;
+    top: 2rem;
+    z-index: 45;
+    display: flex;
+    flex: 0 0 10.25rem;
+    flex-direction: column;
+    gap: 0.1rem;
+    width: 10.25rem;
+    height: calc(100vh - 2rem);
+    padding: 0.55rem 0.35rem;
+    overflow-y: auto;
+    color: #d5d9de;
+    background: var(--artemis-module-background);
+    border-right: 1px solid var(--artemis-border-color);
+    scrollbar-width: thin;
+}
+
+.global-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 1.95rem;
+    padding: 0.35rem 0.5rem;
+    color: #d5d9de;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    border-radius: 0.125rem;
+}
+
+.global-nav-item:hover {
+    color: #fff;
+    background: rgb(255 255 255 / 0.055);
+    text-decoration: none;
+}
+
+.global-nav-item.active {
+    color: var(--artemis-link-color);
+    background: color-mix(in oklab, var(--artemis-link-color) 12%, var(--artemis-module-background));
+    border-left-color: var(--artemis-link-color);
+}
+
+.global-nav-item [data-icon] {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.global-sidebar-spacer {
+    flex: 1 1 auto;
+    min-height: 1rem;
+}
+
+.global-settings {
+    margin-top: 0.25rem;
+    border-top: 1px solid var(--artemis-border-color);
+    padding-top: 0.6rem;
+}
+
+.sidebar {
+    top: 2rem;
+    flex: 0 0 var(--app-sidebar-width);
+    width: var(--app-sidebar-width);
+    height: calc(100vh - 2rem);
+    gap: 0.65rem;
+    padding: 0.6rem 0.45rem;
+    color: #d5d9de;
+    background: var(--artemis-module-background);
+    border-right: 1px solid var(--artemis-border-color);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.sidebar-brand {
+    min-height: 1.8rem;
+    padding: 0.15rem 0.45rem;
+}
+
+.contextual-sidebar-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--artemis-link-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.info-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 0.875rem;
+    height: 0.875rem;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: #495057;
+    border-radius: 50%;
+}
+
+.context-card {
+    gap: 0.35rem;
+    padding: 0.55rem;
+    background: var(--artemis-body-background);
+    border-color: var(--artemis-border-color);
+    border-radius: 0.25rem;
+}
+
+.context-label {
+    font-size: 0.625rem;
+}
+
+.context-select {
+    font-size: 0.72rem;
+}
+
+.context-exam {
+    font-size: 0.68rem;
+}
+
+.sidebar-nav {
+    gap: 0.05rem;
+}
+
+.nav-item {
+    min-height: 1.9rem;
+    gap: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    color: #e0e3e7;
+    font-size: 0.72rem;
+    border-radius: 0.125rem;
+}
+
+.nav-item:hover {
+    color: #fff;
+    background: rgb(255 255 255 / 0.055);
+}
+
+.nav-item.active {
+    color: var(--artemis-link-color);
+    background: #22272e;
+    box-shadow: inset 2px 0 0 var(--artemis-link-color);
+}
+
+.nav-item [data-icon] {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.sidebar-divider {
+    margin: 0.25rem 0;
+    background: var(--artemis-border-color);
+}
+
+.sidebar-footer {
+    gap: 0.35rem;
+    padding-top: 0.35rem;
+    border-color: var(--artemis-border-color);
+}
+
+.user-card {
+    padding: 0.35rem;
+}
+
+.app-main {
+    min-height: calc(100vh - 2rem);
+    background: var(--artemis-module-background);
+}
+
+.topbar {
+    top: 2rem;
+    height: 2.55rem;
+    padding: 0 0.8rem;
+    color: #f8f9fa;
+    background: var(--artemis-module-background);
+    border-bottom: 1px solid var(--artemis-border-color);
+    backdrop-filter: none;
+}
+
+.breadcrumb {
+    gap: 0.35rem;
+    font-size: 0.72rem;
+}
+
+.breadcrumb a {
+    color: var(--artemis-link-color);
+}
+
+.breadcrumb [aria-current='page'] {
+    color: var(--tumaet-ui-text-color);
+}
+
+.page {
+    max-width: none;
+    padding: 1.2rem 1.5rem 2rem;
+}
+
+.page-header {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 0.85rem;
+}
+
+.card,
+.stat-card {
+    background: var(--tumaet-ui-content-background);
+    border-color: var(--artemis-border-color);
+    border-radius: 0.25rem;
+    box-shadow: none;
+}
+
+.card-header {
+    padding: 0.7rem 0.9rem;
+    border-bottom-color: var(--artemis-border-color);
+}
+
+.card-body {
+    padding: 0.9rem;
+}
+
+.card-footer {
+    padding: 0.6rem 0.9rem;
+    background: var(--artemis-panel-background);
+    border-color: var(--artemis-border-color);
+}
+
+.btn {
+    min-height: 2.1rem;
+    padding: 0 0.7rem;
+    font-size: 0.75rem;
+    border-radius: 0.2rem;
+}
+
+.btn-sm {
+    min-height: 1.8rem;
+    padding-inline: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--artemis-primary-color);
+    border-color: var(--artemis-primary-color);
+}
+
+.btn-secondary {
+    color: var(--tumaet-ui-text-color);
+    background: #343a40;
+    border-color: #495057;
+}
+
+.btn-secondary:hover {
+    background: #495057;
+}
+
+.icon-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+}
+
+.stat-card {
+    padding: 0.85rem;
+    gap: 0.65rem;
+}
+
+.stat-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+}
+
+.tag,
+.status {
+    border-radius: 0.2rem;
+}
+
+.tabs {
+    border-color: var(--artemis-border-color);
+}
+
+.tab {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.78rem;
+}
+
+.tab[aria-selected='true'] {
+    color: var(--artemis-link-color);
+    background: transparent;
+}
+
+.page-actions {
+    gap: 0.4rem;
+}
+
+@media (min-width: 1500px) {
+    .page {
+        padding-inline: 3.75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .global-sidebar {
+        display: none;
+    }
+
+    .sidebar {
+        top: 2rem;
+        height: calc(100vh - 2rem);
+    }
+
+    .sidebar-open .sidebar {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        top: 2rem;
+    }
+
+    .app-shell {
+        padding-top: 2rem;
+    }
+
+    .page {
+        padding: 1rem 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .global-header-spacer {
+        display: none;
+    }
+
+    .global-course-link {
+        flex: 1 1 auto;
+        max-width: 8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .global-utility-button:first-of-type span:not([data-icon]),
+    .global-utility-button kbd {
+        display: none;
+    }
+
+    .global-utilities > a,
+    .global-utilities > span,
+    .global-utility-button:not(:first-of-type) {
+        display: none;
+    }
+
+    .page-actions .btn {
+        flex: 1 1 auto;
     }
 }
