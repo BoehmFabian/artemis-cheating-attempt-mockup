@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en-GB" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>CA-2026-0042 · Artemis</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Exam management navigation">
+        <div class="sidebar-brand">
+            <a class="brand-link" href="index.html">
+                <span class="brand-mark"><span data-icon="graduation-cap"></span></span>
+                <span class="brand-text">
+                    <strong>Artemis</strong>
+                    <small>Exam management</small>
+                </span>
+            </a>
+            <button class="icon-btn sidebar-close" type="button" data-sidebar-toggle aria-label="Close navigation" aria-expanded="false">
+                <span data-icon="x"></span>
+            </button>
+        </div>
+
+        <div class="context-card">
+            <span class="context-label">Course</span>
+            <button class="context-select" type="button">
+                ITP – Introduction to Programming
+                <span data-icon="chevron-down"></span>
+            </button>
+            <span class="context-exam"><span class="live-dot"></span> ITP SE1 · Supervised Exercise</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Exam sections">
+            <a class="nav-item" href="#"><span data-icon="grid"></span> Overview</a>
+            <a class="nav-item" href="#" data-staff-only><span data-icon="list"></span> Exercise groups</a>
+            <a class="nav-item" href="#"><span data-icon="users"></span> Students</a>
+            <a class="nav-item" href="#" data-staff-only><span data-icon="flask"></span> Test runs</a>
+            <a class="nav-item" href="#"><span data-icon="clipboard"></span> Assessment dashboard</a>
+            <a class="nav-item" href="#" data-staff-only><span data-icon="chart"></span> Grading</a>
+            <a class="nav-item" href="#" data-staff-only><span data-icon="eye"></span> Scores</a>
+            <div class="sidebar-divider" role="separator"></div>
+            <a class="nav-item active" href="index.html" aria-current="page"><span data-icon="flag"></span> Cheating attempts <span class="nav-badge" data-nav-badge>4</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a class="nav-item" href="#" data-staff-only><span data-icon="settings"></span> Exam settings</a>
+            <div class="user-card" data-user-card>
+                <span class="avatar avatar-sm" data-user-avatar>AB</span>
+                <div>
+                    <div class="user-name" data-user-name>Dr. Anna Bauer</div>
+                    <div class="user-role" data-user-role>Instructor · ITP</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" data-sidebar-toggle aria-hidden="true"></div>
+
+    <div class="app-main">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-label="Open navigation" aria-expanded="false">
+                    <span data-icon="menu"></span>
+                </button>
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Cheating attempts</a>
+                    <span data-icon="chevron-right"></span>
+                    <span aria-current="page">CA-2026-0042</span>
+                </nav>
+            </div>
+            <div class="topbar-right">
+                <span class="status status-info"><span class="status-dot"></span> Post-exam review</span>
+                <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">
+                    <span class="theme-icon-light" data-icon="moon"></span>
+                    <span class="theme-icon-dark" data-icon="sun"></span>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Help"><span data-icon="help-circle"></span></button>
+                <div class="profile-menu-root" data-profile-menu-root></div>
+            </div>
+        </header>
+
+        <main class="page">
+            <a class="back-link" href="index.html"><span data-icon="arrow-left"></span> Back to cheating attempts</a>
+
+            <div class="page-header">
+                <div class="page-heading">
+                    <div class="title-line">
+                        <h1>CA-2026-0042</h1>
+                        <span class="status status-info" data-case-status><span class="status-dot"></span> In review</span>
+                        <span class="tag tag-neutral" id="case-category">AI / autocompletion</span>
+                    </div>
+                    <p class="page-subtitle">Lena Hoffmann · TUM ID <span class="mono">go42aty</span> · Matriculation 03712345 · MI HS 1, Seat 14B</p>
+                    <div class="meta-row">
+                        <span><span data-icon="calendar"></span> 13 Nov 2026</span>
+                        <span><span data-icon="clock"></span> Incident 14:31</span>
+                        <span><span data-icon="user"></span> Reported by Aylin Yilmaz</span>
+                        <span><span data-icon="paperclip"></span> 2 evidence files</span>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="btn btn-secondary" type="button" data-staff-only data-demo-action="Case export is simulated in this mockup.">
+                        <span data-icon="download"></span> Export case
+                    </button>
+                    <a class="btn btn-secondary" href="room-protocol.html" data-staff-only>
+                        <span data-icon="clipboard"></span> Room protocol
+                    </a>
+                    <button class="icon-btn" type="button" data-staff-only aria-label="More actions" data-demo-action="More case actions are simulated in this mockup.">
+                        <span data-icon="more-vertical"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Case sections">
+                <button class="tab" type="button" role="tab" id="tab-summary" aria-selected="true" aria-controls="panel-summary" data-tab="summary">
+                    Summary
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-evidence" aria-selected="false" aria-controls="panel-evidence" data-tab="evidence" tabindex="-1">
+                    Evidence <span class="tab-count">2</span>
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-decision" aria-selected="false" aria-controls="panel-decision" data-tab="decision" tabindex="-1" data-staff-tab>
+                    Decision
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-audit" aria-selected="false" aria-controls="panel-audit" data-tab="audit" tabindex="-1" data-staff-tab>
+                    Audit log
+                </button>
+            </div>
+
+            <section class="tab-panel" id="panel-summary" role="tabpanel" aria-labelledby="tab-summary">
+                <div class="detail-grid">
+                    <div class="detail-main">
+                        <section class="card" aria-labelledby="incident-title">
+                            <div class="card-header">
+                                <h2 id="incident-title">Incident</h2>
+                                <div class="header-actions">
+                                    <span class="tag tag-neutral">Reported 14:31</span>
+                                    <a class="btn btn-secondary btn-sm" href="edit-report.html"><span data-icon="edit"></span> Edit report</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="lead-text" id="incident-description">Student had GitHub Copilot chat open in VS Code and was actively accepting inline suggestions for the current exercise. The tool was closed after a warning. The student continued the exam without further interruption.</p>
+                                <dl class="meta-grid">
+                                    <div>
+                                        <dt>Incident time</dt>
+                                        <dd>13 Nov 2026, 14:31</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Room / seat</dt>
+                                        <dd>MI HS 1 · Seat 14B</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Reporter</dt>
+                                        <dd>Aylin Yilmaz (Tutor)</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Witness</dt>
+                                        <dd>—</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Immediate action</dt>
+                                        <dd id="incident-immediate-action">Warning given; tool closed</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Technical check</dt>
+                                        <dd>Copilot chat and inline suggestions confirmed</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </section>
+
+                        <section class="card" aria-labelledby="evidence-title">
+                            <div class="card-header">
+                                <h2 id="evidence-title">Evidence</h2>
+                                <span class="status status-success"><span data-icon="check-circle"></span> Integrity verified</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="evidence-grid">
+                                    <article class="evidence-card">
+                                        <div class="evidence-thumb" aria-hidden="true">
+                                            <span class="thumb-badge">Photo</span>
+                                            <div class="mock-editor">
+                                                <div class="mock-editor-bar"><span></span><span></span><span></span><em>Exercise.java</em></div>
+                                                <div class="mock-editor-body">
+                                                    <div class="mock-line"><i></i><b></b></div>
+                                                    <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                                    <div class="mock-line"><i></i><b class="green"></b></div>
+                                                    <div class="mock-line"><i class="short"></i><b></b><b class="purple"></b></div>
+                                                    <div class="mock-copilot">
+                                                        <span class="mock-copilot-head">GitHub Copilot</span>
+                                                        <span class="mock-copilot-line"></span>
+                                                        <span class="mock-copilot-line short"></span>
+                                                        <span class="mock-copilot-accept">Accept suggestion</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="evidence-card-body">
+                                            <h3>IMG_2041.jpg</h3>
+                                            <p>Copilot chat open with an accepted inline suggestion</p>
+                                            <div class="evidence-meta">3.2 MB · uploaded 14:31</div>
+                                            <button class="btn btn-secondary btn-sm" type="button" data-evidence-kind="photo"><span data-icon="eye"></span> View evidence</button>
+                                        </div>
+                                    </article>
+
+                                    <article class="evidence-card">
+                                        <div class="evidence-thumb evidence-thumb-video" aria-hidden="true">
+                                            <span class="thumb-badge">Video</span>
+                                            <div class="mock-editor">
+                                                <div class="mock-editor-bar"><span></span><span></span><span></span><em>Screen recording</em></div>
+                                                <div class="mock-editor-body">
+                                                    <div class="mock-line"><i></i><b></b></div>
+                                                    <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                                    <div class="mock-line"><i></i><b class="green"></b></div>
+                                                    <div class="mock-line"><i class="short"></i><b></b></div>
+                                                </div>
+                                            </div>
+                                            <div class="play-overlay"><span class="play-button"><span data-icon="play"></span></span></div>
+                                            <span class="video-duration">00:12</span>
+                                        </div>
+                                        <div class="evidence-card-body">
+                                            <h3>VID_2042.mp4</h3>
+                                            <p>Screen recording of the active suggestion being accepted</p>
+                                            <div class="evidence-meta">12.8 MB · uploaded 14:31</div>
+                                            <button class="btn btn-secondary btn-sm" type="button" data-evidence-kind="video"><span data-icon="eye"></span> View evidence</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <aside class="detail-side" aria-label="Case context">
+                        <section class="card student-card" aria-labelledby="student-title">
+                            <div class="card-header">
+                                <h2 id="student-title">Student</h2>
+                                <span class="tag tag-success"><span data-icon="check"></span> Attendance verified</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="avatar avatar-lg">LH</span>
+                                <div class="student-body">
+                                    <div class="student-name">Lena Hoffmann</div>
+                                    <div class="student-meta">TUM ID <span class="mono">go42aty</span><br>Matriculation 03712345</div>
+                                    <div class="student-details">
+                                        <div class="detail-line"><span data-icon="map-pin"></span> MI HS 1 · Seat 14B</div>
+                                        <div class="detail-line"><span data-icon="clock"></span> Exam started 14:00</div>
+                                        <div class="detail-line"><span data-icon="monitor"></span> Session verified at 14:02</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card" aria-labelledby="status-title">
+                            <div class="card-header">
+                                <h2 id="status-title">Case status</h2>
+                            </div>
+                            <div class="card-body">
+                                <ol class="timeline timeline-compact">
+                                    <li>
+                                        <span class="timeline-dot tone-success"></span>
+                                        <time class="timeline-time">13 Nov · 14:31</time>
+                                        <div class="timeline-text"><strong>Submitted</strong> by Aylin Yilmaz</div>
+                                    </li>
+                                    <li>
+                                        <span class="timeline-dot tone-success"></span>
+                                        <time class="timeline-time">13 Nov · 14:33</time>
+                                        <div class="timeline-text"><strong>Acknowledged</strong> by Dr. Anna Bauer</div>
+                                    </li>
+                                    <li>
+                                        <span class="timeline-dot"></span>
+                                        <time class="timeline-time">13 Nov · 15:10</time>
+                                        <div class="timeline-text"><strong>In review</strong> — room protocol and statement being completed</div>
+                                    </li>
+                                    <li>
+                                        <span class="timeline-dot tone-muted"></span>
+                                        <time class="timeline-time">Next</time>
+                                        <div class="timeline-text"><strong>Decision</strong> by the responsible instructor</div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <section class="card" aria-labelledby="links-title">
+                            <div class="card-header">
+                                <h2 id="links-title">Linked records</h2>
+                            </div>
+                            <div class="card-body" style="padding: 0.5rem;">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="#">
+                                            <span class="link-icon"><span data-icon="monitor"></span></span>
+                                            <span><strong>Suspicious session</strong><small>SES-8842 · same browser fingerprint</small></span>
+                                            <span class="chevron" data-icon="chevron-right"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="link-icon"><span data-icon="file-text"></span></span>
+                                            <span><strong>Plagiarism case</strong><small>PL-2026-019 · programming exercise</small></span>
+                                            <span class="chevron" data-icon="chevron-right"></span>
+                                        </a>
+                                    </li>
+                                    <li data-staff-only>
+                                        <a href="room-protocol.html">
+                                            <span class="link-icon"><span data-icon="clipboard"></span></span>
+                                            <span><strong>Room protocol</strong><small>R-17 · MI HS 1 room protocol</small></span>
+                                            <span class="chevron" data-icon="chevron-right"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="tab-panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
+                <div class="panel-header">
+                    <div>
+                        <h2>Evidence</h2>
+                    </div>
+                    <button class="btn btn-secondary" type="button" data-demo-action="Adding evidence is simulated in this mockup."><span data-icon="upload"></span> Add evidence</button>
+                </div>
+
+                <div class="evidence-detail-grid">
+                    <article class="card evidence-detail-card">
+                        <div class="card-body">
+                            <div class="evidence-thumb" aria-hidden="true">
+                                <span class="thumb-badge">Photo</span>
+                                <div class="mock-editor">
+                                    <div class="mock-editor-bar"><span></span><span></span><span></span><em>Exercise.java</em></div>
+                                    <div class="mock-editor-body">
+                                        <div class="mock-line"><i></i><b></b></div>
+                                        <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                        <div class="mock-line"><i></i><b class="green"></b></div>
+                                        <div class="mock-line"><i class="short"></i><b></b><b class="purple"></b></div>
+                                        <div class="mock-copilot">
+                                            <span class="mock-copilot-head">GitHub Copilot</span>
+                                            <span class="mock-copilot-line"></span>
+                                            <span class="mock-copilot-line short"></span>
+                                            <span class="mock-copilot-accept">Accept suggestion</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>IMG_2041.jpg</h3>
+                            <p>Copilot chat open with an accepted inline suggestion.</p>
+                            <dl class="evidence-detail-meta">
+                                <div><dt>Uploaded by</dt><dd>Aylin Yilmaz</dd></div>
+                                <div><dt>Uploaded at</dt><dd>13 Nov, 14:31</dd></div>
+                                <div><dt>Size</dt><dd>3.2 MB</dd></div>
+                                <div><dt>Integrity</dt><dd><span class="status status-success"><span data-icon="check"></span> Verified</span></dd></div>
+                            </dl>
+                            <div style="margin-top: 0.75rem;"><span class="hash">SHA-256: 9f2c 41ab 7d80 e1f4 6a3b 0c92 55de 8f10</span></div>
+                            <div class="card-actions" style="justify-content: flex-start;">
+                                <button class="btn btn-secondary btn-sm" type="button" data-evidence-kind="photo"><span data-icon="eye"></span> View</button>
+                                <button class="btn btn-ghost btn-sm" type="button" data-demo-action="Evidence download is simulated in this mockup."><span data-icon="download"></span> Download</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card evidence-detail-card">
+                        <div class="card-body">
+                            <div class="evidence-thumb evidence-thumb-video" aria-hidden="true">
+                                <span class="thumb-badge">Video</span>
+                                <div class="mock-editor">
+                                    <div class="mock-editor-bar"><span></span><span></span><span></span><em>Screen recording</em></div>
+                                    <div class="mock-editor-body">
+                                        <div class="mock-line"><i></i><b></b></div>
+                                        <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                        <div class="mock-line"><i></i><b class="green"></b></div>
+                                        <div class="mock-line"><i class="short"></i><b></b></div>
+                                    </div>
+                                </div>
+                                <div class="play-overlay"><span class="play-button"><span data-icon="play"></span></span></div>
+                                <span class="video-duration">00:12</span>
+                            </div>
+                            <h3>VID_2042.mp4</h3>
+                            <p>Screen recording of the active suggestion being accepted.</p>
+                            <dl class="evidence-detail-meta">
+                                <div><dt>Uploaded by</dt><dd>Aylin Yilmaz</dd></div>
+                                <div><dt>Uploaded at</dt><dd>13 Nov, 14:31</dd></div>
+                                <div><dt>Size</dt><dd>12.8 MB</dd></div>
+                                <div><dt>Integrity</dt><dd><span class="status status-success"><span data-icon="check"></span> Verified</span></dd></div>
+                            </dl>
+                            <div style="margin-top: 0.75rem;"><span class="hash">SHA-256: c7d1 8e04 3b2a 91f0 4d77 aa52 6e18 0c39</span></div>
+                            <div class="card-actions" style="justify-content: flex-start;">
+                                <button class="btn btn-secondary btn-sm" type="button" data-evidence-kind="video"><span data-icon="eye"></span> View</button>
+                                <button class="btn btn-ghost btn-sm" type="button" data-demo-action="Evidence download is simulated in this mockup."><span data-icon="download"></span> Download</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="card" aria-labelledby="custody-title">
+                    <div class="card-header">
+                        <h2 id="custody-title">Chain of custody</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Actor</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Detail</th>
+                                    <th scope="col">IP address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>13 Nov · 14:31</td><td>Aylin Yilmaz</td><td>Uploaded</td><td>Initial evidence for CA-2026-0042</td><td class="mono">10.0.12.34</td></tr>
+                                <tr><td>13 Nov · 14:36</td><td>Dr. Anna Bauer</td><td>Viewed</td><td>Opened case and inspected both files</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>13 Nov · 15:02</td><td>Dr. Anna Bauer</td><td>Downloaded</td><td>Room protocol preparation</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>13 Nov · 15:10</td><td>Markus Klein</td><td>Viewed</td><td>Co-signature review</td><td class="mono">10.0.12.18</td></tr>
+                                <tr><td>13 Nov · 15:12</td><td>System</td><td>Integrity verified</td><td>SHA-256 match for both files</td><td>—</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+
+            <section class="tab-panel" id="panel-decision" role="tabpanel" aria-labelledby="tab-decision" hidden data-staff-tab>
+                <section class="card" aria-labelledby="decision-title">
+                    <div class="card-header">
+                        <h2 id="decision-title">Decision</h2>
+                        <span class="status status-warning"><span class="status-dot"></span> Pending</span>
+                    </div>
+                    <div class="card-body">
+                        <dl class="meta-grid" style="margin-top: 0;">
+                            <div><dt>Formal notification</dt><dd>Sent 13 Nov 2026 · email</dd></div>
+                            <div><dt>Student statement</dt><dd>Received 14 Nov 2026</dd></div>
+                            <div><dt>Decision deadline</dt><dd>20 Nov 2026</dd></div>
+                            <div><dt>Decision maker</dt><dd>Dr. Anna Bauer (Instructor)</dd></div>
+                        </dl>
+                        <div class="card-actions" style="justify-content: flex-start;">
+                            <a class="btn btn-primary" href="decision.html">Open decision form <span data-icon="arrow-right"></span></a>
+                            <button class="btn btn-secondary" type="button" data-demo-action="The notification letter is simulated in this mockup."><span data-icon="file-text"></span> View notification</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="tab-panel" id="panel-audit" role="tabpanel" aria-labelledby="tab-audit" hidden data-staff-tab>
+                <div class="panel-header">
+                    <div>
+                        <h2>Audit log</h2>
+                    </div>
+                    <button class="btn btn-secondary" type="button" data-staff-only data-demo-action="Audit export is simulated in this mockup."><span data-icon="download"></span> Export audit log</button>
+                </div>
+                <section class="card">
+                    <div class="table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Actor</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Detail</th>
+                                    <th scope="col">IP address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>13 Nov · 14:31</td><td>Aylin Yilmaz</td><td>Created</td><td>Case submitted with 2 evidence files</td><td class="mono">10.0.12.34</td></tr>
+                                <tr><td>13 Nov · 14:32</td><td>System</td><td>Notified</td><td>Primary supervisor notified · case reference only</td><td>—</td></tr>
+                                <tr><td>13 Nov · 14:33</td><td>Dr. Anna Bauer</td><td>Acknowledged</td><td>Case accepted for review</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>13 Nov · 14:36</td><td>Dr. Anna Bauer</td><td>Evidence viewed</td><td>Opened IMG_2041.jpg and VID_2042.mp4</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>13 Nov · 14:45</td><td>Dr. Anna Bauer</td><td>Notification recorded</td><td>Formal notification sent by email</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>13 Nov · 15:10</td><td>Dr. Anna Bauer</td><td>Status changed</td><td>ACKNOWLEDGED → UNDER_REVIEW</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>14 Nov · 09:18</td><td>Dr. Anna Bauer</td><td>Statement recorded</td><td>Student statement received by email</td><td class="mono">10.0.12.12</td></tr>
+                                <tr><td>14 Nov · 09:19</td><td>Dr. Anna Bauer</td><td>Viewed</td><td>Prior confirmed cases checked for this student</td><td class="mono">10.0.12.12</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</div>
+
+<dialog id="evidence-dialog" data-kind="photo" aria-labelledby="evidence-dialog-title">
+    <div class="dialog-card">
+        <div class="dialog-header">
+            <h2 id="evidence-dialog-title">IMG_2041.jpg</h2>
+            <button class="icon-btn" type="button" data-close-dialog aria-label="Close evidence viewer"><span data-icon="x"></span></button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-evidence-layout">
+                <div class="dialog-evidence-preview">
+                    <div class="evidence-thumb preview-photo" aria-hidden="true">
+                        <div class="mock-editor">
+                            <div class="mock-editor-bar"><span></span><span></span><span></span><em>Exercise.java</em></div>
+                            <div class="mock-editor-body">
+                                <div class="mock-line"><i></i><b></b></div>
+                                <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                <div class="mock-line"><i></i><b class="green"></b></div>
+                                <div class="mock-line"><i class="short"></i><b></b><b class="purple"></b></div>
+                                <div class="mock-copilot">
+                                    <span class="mock-copilot-head">GitHub Copilot</span>
+                                    <span class="mock-copilot-line"></span>
+                                    <span class="mock-copilot-line short"></span>
+                                    <span class="mock-copilot-accept">Accept suggestion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evidence-thumb evidence-thumb-video preview-video" aria-hidden="true">
+                        <div class="mock-editor">
+                            <div class="mock-editor-bar"><span></span><span></span><span></span><em>Screen recording</em></div>
+                            <div class="mock-editor-body">
+                                <div class="mock-line"><i></i><b></b></div>
+                                <div class="mock-line"><i class="short"></i><b class="purple"></b><b></b></div>
+                                <div class="mock-line"><i></i><b class="green"></b></div>
+                                <div class="mock-line"><i class="short"></i><b></b></div>
+                            </div>
+                        </div>
+                        <div class="play-overlay"><span class="play-button"><span data-icon="play"></span></span></div>
+                        <span class="video-duration">00:12</span>
+                    </div>
+                </div>
+                <div class="dialog-evidence-meta">
+                    <p id="ev-description" style="font-size: 0.8125rem; line-height: 1.5; color: var(--app-muted-text);">GitHub Copilot chat open with an accepted inline suggestion.</p>
+                    <dl>
+                        <dt>File</dt><dd id="ev-name">IMG_2041.jpg</dd>
+                        <dt>Type</dt><dd id="ev-type">JPEG image · 3024 × 1964</dd>
+                        <dt>Size</dt><dd id="ev-size">3.2 MB</dd>
+                        <dt>Uploaded</dt><dd id="ev-uploaded">13 Nov 2026, 14:31</dd>
+                        <dt>By</dt><dd id="ev-by">Aylin Yilmaz</dd>
+                        <dt>Integrity</dt><dd><span class="status status-success"><span data-icon="check"></span> Verified</span></dd>
+                    </dl>
+                    <div>
+                        <div class="field-label">SHA-256</div>
+                        <div class="hash" id="ev-hash">9f2c 41ab 7d80 e1f4 6a3b 0c92 55de 8f10</div>
+                    </div>
+                    <div>
+                        <div class="field-label" style="margin-bottom: 0.375rem;">Chain of custody</div>
+                        <ul class="chain-list">
+                            <li><time>14:31</time><span>Aylin Yilmaz uploaded the file</span></li>
+                            <li><time>14:36</time><span>Dr. Anna Bauer viewed the file</span></li>
+                            <li><time>15:02</time><span>Dr. Anna Bauer downloaded the file</span></li>
+                            <li><time>15:12</time><span>System verified the SHA-256 hash</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <button class="btn btn-secondary" type="button" data-close-dialog>Close</button>
+            <button class="btn btn-primary" type="button" id="download-evidence"><span data-icon="download"></span> Download</button>
+        </div>
+    </div>
+</dialog>
+
+</body>
+</html>
