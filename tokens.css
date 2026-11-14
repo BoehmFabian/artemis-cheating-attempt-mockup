@@ -8,15 +8,15 @@
     --artemis-navbar-background: #353d47;
     --artemis-panel-background: #fff;
     --artemis-hover-background: #f1f5f9;
-    --artemis-border-color: #dee2e6;
+    --artemis-border-color: #e2e8f0;
     --artemis-link-color: #3e8acc;
     --artemis-primary-color: #3e8acc;
     --artemis-info-color: #17a2b8;
-    --artemis-font-family: ui-sans-serif, system-ui, sans-serif;
+    --artemis-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --tumaet-ui-spacing: 0.25rem;
     --tumaet-ui-splitter-divider-size: 6px;
-    --tumaet-ui-font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --tumaet-ui-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --tumaet-ui-font-size-xs: 0.75rem;
     --tumaet-ui-font-size-sm: 0.875rem;
     --tumaet-ui-font-size-base: 1rem;
@@ -75,7 +75,7 @@
 
     /* Button palette: change these roles per theme without recoloring status indicators.
        Primary uses a contrast-checked pair independently of the host brand fill. */
-    --tumaet-ui-button-primary-background: #3e8acc;
+    --tumaet-ui-button-primary-background: #3779b4;
     --tumaet-ui-button-primary-contrast: #fff;
     --tumaet-ui-button-primary-foreground: var(--tumaet-ui-accent-color);
     --tumaet-ui-button-secondary-background: var(--tumaet-ui-hover-background);
@@ -96,7 +96,7 @@
     --tumaet-ui-button-contrast-background: var(--tumaet-ui-contrast-background);
     --tumaet-ui-button-contrast-contrast: var(--tumaet-ui-contrast-color);
     --tumaet-ui-button-contrast-foreground: var(--tumaet-ui-contrast-background);
-    --tumaet-ui-button-secondary-border: #dee2e6;
+    --tumaet-ui-button-secondary-border: #e2e8f0;
     --tumaet-ui-button-focus-color: var(--tumaet-ui-focus-color);
     --tumaet-ui-button-hover-overlay: rgb(51 65 85 / 0.05);
     --tumaet-ui-button-active-overlay: rgb(51 65 85 / 0.08);
@@ -110,53 +110,53 @@
     --artemis-module-background: #16191d;
     --artemis-navbar-background: #353d47;
     --artemis-panel-background: #1f242b;
-    --artemis-hover-background: #23262a;
-    --artemis-border-color: #444;
+    --artemis-hover-background: #262b31;
+    --artemis-border-color: #262b31;
     --artemis-link-color: #3e8acc;
     --artemis-primary-color: #3e8acc;
     --artemis-info-color: #17a2b8;
-    --artemis-font-family: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    --artemis-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --tumaet-ui-primary-color: #3e8acc;
     --tumaet-ui-primary-contrast-color: #fff;
     --tumaet-ui-accent-color: #3e8acc;
     --tumaet-ui-focus-color: #3e8acc;
-    --tumaet-ui-border-color: #343a40;
+    --tumaet-ui-border-color: #262b31;
     --tumaet-ui-control-border-color: #434c56;
     --tumaet-ui-control-border-hover-color: #5e6a78;
     --tumaet-ui-text-color: #f8f9fa;
     --tumaet-ui-text-hover-color: #fff;
     --tumaet-ui-muted-color: #adb5bd;
     --tumaet-ui-disabled-color: #adb5bd;
-    --tumaet-ui-content-background: #1f242b;
+    --tumaet-ui-content-background: #16191d;
     --tumaet-ui-control-background: #101214;
-    --tumaet-ui-overlay-background: #1f242b;
-    --tumaet-ui-hover-background: #23262a;
+    --tumaet-ui-overlay-background: #16191d;
+    --tumaet-ui-hover-background: #262b31;
     --tumaet-ui-disabled-background: #343a42;
     --tumaet-ui-contrast-background: #fff;
     --tumaet-ui-contrast-color: #16191d;
     --tumaet-ui-highlight-color: #fff;
-    --tumaet-ui-highlight-background: #353d47;
-    --tumaet-ui-highlight-focus-background: #353d47;
+    --tumaet-ui-highlight-background: #232f3b;
+    --tumaet-ui-highlight-focus-background: #293a49;
     --tumaet-ui-state-danger: #e74c3c;
     --tumaet-ui-state-danger-contrast: #fff;
-    --tumaet-ui-state-danger-foreground: #ff7668;
+    --tumaet-ui-state-danger-foreground: #ef8b80;
     --tumaet-ui-state-success: #00bc8c;
     --tumaet-ui-state-success-contrast: #fff;
-    --tumaet-ui-state-success-foreground: #00d6a2;
+    --tumaet-ui-state-success-foreground: #00bc8c;
     --tumaet-ui-state-warning: #f39c12;
     --tumaet-ui-state-warning-contrast: #16191d;
-    --tumaet-ui-state-warning-foreground: #f7b94f;
+    --tumaet-ui-state-warning-foreground: #f39c12;
     --tumaet-ui-state-info: #17a2b8;
     --tumaet-ui-state-info-contrast: #fff;
     --tumaet-ui-state-info-foreground: #45c2d4;
-    --tumaet-ui-table-striped-background: #22272e;
+    --tumaet-ui-table-striped-background: #1d2024;
     --tumaet-ui-tooltip-background: #343a42;
     --tumaet-ui-tooltip-color: #fff;
 
     /* Button palette: change these roles per theme without recoloring status indicators.
        Primary uses a contrast-checked pair independently of the host brand fill. */
-    --tumaet-ui-button-primary-background: #3e8acc;
+    --tumaet-ui-button-primary-background: #2e6da4;
     --tumaet-ui-button-primary-contrast: #fff;
     --tumaet-ui-button-primary-foreground: var(--tumaet-ui-accent-color);
     --tumaet-ui-button-secondary-background: var(--tumaet-ui-hover-background);
@@ -177,7 +177,7 @@
     --tumaet-ui-button-contrast-background: var(--tumaet-ui-contrast-background);
     --tumaet-ui-button-contrast-contrast: var(--tumaet-ui-contrast-color);
     --tumaet-ui-button-contrast-foreground: var(--tumaet-ui-contrast-background);
-    --tumaet-ui-button-secondary-border: #444;
+    --tumaet-ui-button-secondary-border: #262b31;
     --tumaet-ui-button-focus-color: var(--tumaet-ui-focus-color);
     --tumaet-ui-button-hover-overlay: rgb(255 255 255 / 0.05);
     --tumaet-ui-button-active-overlay: rgb(255 255 255 / 0.08);

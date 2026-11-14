@@ -15,7 +15,7 @@
         <a class="global-brand" href="index.html" aria-label="Artemis home">
             <span class="global-brand-mark" aria-hidden="true">A</span>
             <span class="global-brand-name">Artemis</span>
-            <span class="global-version">10.7</span>
+            <span class="global-version">10.8</span>
         </a>
         <span class="global-header-divider" aria-hidden="true"></span>
         <a class="global-course-link" href="#"><span class="global-course-mark">e</span> e-Prüfungs-Symposium 2024</a>
@@ -24,8 +24,31 @@
             <a href="#">Student</a><span aria-hidden="true">|</span><a href="#">Management</a>
             <button type="button" class="global-utility-button" aria-label="Search"><span data-icon="search"></span><span>Search</span><kbd>Ctrl+K</kbd></button>
             <button type="button" class="global-utility-button" aria-label="Notifications"><span data-icon="bell"></span></button>
+            
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">
+                <span class="theme-icon-light" data-icon="moon"></span>
+                <span class="theme-icon-dark" data-icon="sun"></span>
+            </button>
+            <button class="icon-btn" type="button" aria-label="Help"><span data-icon="help-circle"></span></button>
+            <div class="profile-menu-root" data-profile-menu-root></div>
         </nav>
     </header>
+
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-label="Open navigation" aria-expanded="false">
+                <span data-icon="menu"></span>
+            </button>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="#">ITP – Introduction to Programming</a>
+                <span data-icon="chevron-right"></span>
+                <a href="#">ITP SE1</a>
+                <span data-icon="chevron-right"></span>
+                <span aria-current="page">Cheating attempts</span>
+            </nav>
+        </div>
+    </header>
+
     <nav class="global-sidebar" aria-label="Artemis navigation">
         <a class="global-nav-item" href="#"><span data-icon="grid"></span><span>Overview</span></a>
         <a class="global-nav-item" href="#"><span data-icon="code"></span><span>Exercises</span></a>
@@ -75,62 +98,31 @@
             <a class="nav-item active" href="index.html" aria-current="page"><span data-icon="flag"></span> Cheating attempts <span class="nav-badge" data-nav-badge>4</span></a>
         </nav>
 
-        <div class="sidebar-footer">
-            <a class="nav-item" href="#" data-staff-only><span data-icon="settings"></span> Exam settings</a>
-            <div class="user-card" data-user-card>
-                <span class="avatar avatar-sm" data-user-avatar>AB</span>
-                <div>
-                    <div class="user-name" data-user-name>Dr. Anna Bauer</div>
-                    <div class="user-role" data-user-role>Instructor · ITP</div>
-                </div>
-            </div>
-        </div>
     </aside>
 
     <div class="sidebar-overlay" data-sidebar-toggle aria-hidden="true"></div>
 
     <div class="app-main">
-        <header class="topbar">
-            <div class="topbar-left">
-                <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-label="Open navigation" aria-expanded="false">
-                    <span data-icon="menu"></span>
-                </button>
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="#">ITP – Introduction to Programming</a>
-                    <span data-icon="chevron-right"></span>
-                    <a href="#">ITP SE1</a>
-                    <span data-icon="chevron-right"></span>
-                    <span aria-current="page">Cheating attempts</span>
-                </nav>
+        <div class="page-header">
+            <div class="page-heading">
+                <div class="title-line">
+                    <span class="tag tag-neutral exam-badge">Exam</span>
+                    <span class="page-context">ITP SE1</span>
+                    <span class="page-context-sep" aria-hidden="true">›</span>
+                    <h1>Cheating attempts</h1>
+                </div>
             </div>
-            <div class="topbar-right">
-                
-                <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">
-                    <span class="theme-icon-light" data-icon="moon"></span>
-                    <span class="theme-icon-dark" data-icon="sun"></span>
-                </button>
-                <button class="icon-btn" type="button" aria-label="Help"><span data-icon="help-circle"></span></button>
-                <div class="profile-menu-root" data-profile-menu-root></div>
+            <div class="page-actions">
+                <a class="btn btn-secondary" href="room-protocol.html" data-staff-only>
+                    <span data-icon="clipboard"></span> Room protocol
+                </a>
+                <a class="btn btn-primary" href="quick-capture.html">
+                    <span data-icon="plus"></span> Report cheating attempt
+                </a>
             </div>
-        </header>
+        </div>
 
         <main class="page">
-            <div class="page-header">
-                <div class="page-heading">
-                    <div class="title-line">
-                        <h1>Cheating attempts</h1>
-                    </div>
-                </div>
-                <div class="page-actions">
-                    <a class="btn btn-secondary" href="room-protocol.html" data-staff-only>
-                        <span data-icon="clipboard"></span> Room protocol
-                    </a>
-                    <a class="btn btn-primary" href="quick-capture.html">
-                        <span data-icon="plus"></span> Report cheating attempt
-                    </a>
-                </div>
-            </div>
-
             <section class="stats-grid" aria-label="Case statistics">
                 <div class="stat-card">
                     <div class="stat-icon tone-warning"><span data-icon="flag"></span></div>
@@ -286,6 +278,16 @@
             </div>
         </main>
     </div>
+    <footer class="app-footer">
+        <nav class="app-footer-links" aria-label="Footer">
+            <a href="#">About</a>
+            <a href="#">Feedback</a>
+            <a href="#">Releases</a>
+            <a href="#">Privacy</a>
+            <a href="#">Imprint</a>
+        </nav>
+        <span class="app-footer-meta">Artemis 10.8 · Mockup</span>
+    </footer>
 </div>
 </body>
 </html>
