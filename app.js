@@ -27,7 +27,17 @@
         },
     };
 
-    currentRole = storage.get(roleKey) === 'tutor' ? 'tutor' : 'staff';
+    function viewFromUrl() {
+        try {
+            return new URLSearchParams(window.location.search).get('view');
+        } catch (error) {
+            return null;
+        }
+    }
+
+    var linkedRole = viewFromUrl();
+    currentRole = linkedRole === 'tutor' || linkedRole === 'staff' ? linkedRole : (storage.get(roleKey) === 'tutor' ? 'tutor' : 'staff');
+    storage.set(roleKey, currentRole);
 
     var initialTheme = storage.get(themeKey) || 'dark';
 
@@ -746,7 +756,7 @@
         var tutorMode = currentRole === 'tutor';
         var config = roleConfig[currentRole];
         if (tutorMode && document.body.dataset.requiresStaff === 'true') {
-            window.location.replace('index.html');
+            window.location.replace('index.html?view=' + currentRole);
             return;
         }
         document.body.classList.toggle('role-tutor', tutorMode);
@@ -794,6 +804,38 @@
             dashboardApplyFilters();
         } else {
             setText('[data-nav-badge]', tutorMode ? 2 : 4);
+        }
+
+        syncRoleLinks();
+    }
+
+    function withView(href) {
+        try {
+            var url = new URL(href, window.location.href);
+            if (url.protocol === 'file:' || url.origin === window.location.origin) {
+                url.searchParams.set('view', currentRole);
+                return url.href;
+            }
+        } catch (error) {
+            /* Keep the original href if it cannot be parsed. */
+        }
+        return href;
+    }
+
+    function syncRoleLinks() {
+        document.querySelectorAll('a[href]').forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|tel:)/i.test(href)) {
+                return;
+            }
+            link.setAttribute('href', withView(link.href));
+        });
+        try {
+            var current = new URL(window.location.href);
+            current.searchParams.set('view', currentRole);
+            window.history.replaceState(null, '', current.href);
+        } catch (error) {
+            /* History updates can be restricted on file:// URLs. */
         }
     }
 
